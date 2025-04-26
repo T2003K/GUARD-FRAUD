@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Range Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body style="background-image: url('/static/bg.png'); background-size: cover; background-repeat: no-repeat;">
+
+    <div class="container">
+        <h1 style="color: rgb(203, 189, 133);">.</h1>
+        
+        <div class="tabs">
+            <div class="tab" onclick="window.location.href='/single_transaction'">
+                Single Transaction Analysis
+            </div>
+            <div class="tab active" onclick="window.location.href='/transaction_range'">
+                Transaction Range Analysis
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="analysis-box">
+                <h2>Transaction Range Analysis</h2>
+                <form id="rangeAnalysisForm">
+                    <div class="form-group">
+                        <label for="start_date">Start Date:</label>
+                        <input type="date" id="start_date" name="start_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="end_date">End Date:</label>
+                        <input type="date" id="end_date" name="end_date" required>
+                    </div>
+                    <button type="submit" class="btn">Analyze</button>
+                </form>
+            </div>
+            
+            <div id="stats" class="stats-box hidden">
+                <h3>Transaction Statistics</h3>
+                <div id="statsContent"></div>
+            </div>
+            
+            <div id="sampleData" class="sample-data-box hidden">
+                <h3>Sample Transaction Data</h3>
+                <div class="data-section">
+                    <h4>First 2 Transactions</h4>
+                    <table id="firstTwoTable">
+                        <thead>
+                            <tr>
+                                <th>Merchant ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="data-section">
+                    <h4>Last 2 Transactions</h4>
+                    <table id="lastTwoTable">
+                        <thead>
+                            <tr>
+                                <th>Merchant ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="charts" class="charts-container hidden">
+                <div class="chart">
+                    <h3>Daily Transaction Count</h3>
+                    <img id="lineChart" src="" alt="Line Chart">
+                </div>
+                <div class="chart">
+                    <h3>Fraud Distribution</h3>
+                    <img id="pieChart" src="" alt="Pie Chart">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

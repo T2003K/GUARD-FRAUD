@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Fraud Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body style="background-image: url('/static/bg.png'); background-size: cover; background-repeat: no-repeat;">
+
+    <div class="container">
+        <h1 style="color: rgb(203, 189, 133);">.</h1>
+        
+        <div class="tabs" >
+            <div class="tab active" onclick="window.location.href='/single_transaction'">
+                Single Transaction Analysis
+            </div>
+            <div class="tab" onclick="window.location.href='/transaction_range'">
+                Transaction Range Analysis
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>Select an analysis option from the tabs above.</p>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

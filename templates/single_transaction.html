@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Transaction Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body style="background-image: url('/static/bg.png'); background-size: cover; background-repeat: no-repeat;">
+
+    <div class="container">
+        <h1 style="color: rgb(203, 189, 133);">.</h1>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="window.location.href='/single_transaction'">
+                Single Transaction Analysis
+            </div>
+            <div class="tab" onclick="window.location.href='/transaction_range'">
+                Transaction Range Analysis
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="analysis-box">
+                <h2>Single Transaction Analysis</h2>
+                <form id="singleTransactionForm">
+                    <div class="form-group">
+                        <label for="merchant_id">Merchant ID:</label>
+                        <input type="text" id="merchant_id" name="merchant_id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Transaction Amount:</label>
+                        <input type="number" id="amount" name="amount" step="0.01" min="0" required>
+                    </div>
+                    <button type="submit" class="btn">Predict</button>
+                </form>
+                <div id="result" class="result-box"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
